@@ -1,17 +1,17 @@
 # Mac Development Ansible Playbook
 
-[![Build Status](https://travis-ci.org/geerlingguy/mac-dev-playbook.svg?branch=master)](https://travis-ci.org/geerlingguy/mac-dev-playbook)
 
-This playbook installs and configures most of the software I use on my Mac for web and software development. Some things in macOS are slightly difficult to automate, so I still have some manual installation steps, but at least it's all documented here.
+This playbook installs and configures most of the software we use on Mac for  software development. Some things in macOS are slightly difficult to automate, so  still have some manual installation steps, but at least it's all documented here.
 
-This is a work in progress, and is mostly a means for me to document my current Mac's setup. I'll be evolving this set of playbooks over time.
+This is a work in progress, and is mostly a means for us to document Mac's setup. We can evolve this set of playbooks over time.
 
 *See also*:
 
   - [Boxen](https://github.com/boxen)
   - [Battleschool](http://spencer.gibb.us/blog/2014/02/03/introducing-battleschool)
   - [osxc](https://github.com/osxc)
-  - [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks) (the original inspiration for this project)
+  - [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks) 
+  - [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) (the original inspiration for this project)
 
 ## Installation
 
@@ -84,6 +84,10 @@ Applications (installed with Homebrew Cask):
   - [Sublime Text](https://www.sublimetext.com/)
   - [Transmit](https://panic.com/transmit/) (S/FTP client)
   - [Vagrant](https://www.vagrantup.com/)
+  - [Virtualbox](https://www.virtualbox.org/)
+  - [Visual Studio Code](https://code.visualstudio.com/)
+  - [Intellij Idea CE](https://www.jetbrains.com/idea/)
+  - [Minishift](https://github.com/minishift/minishift)
 
 Packages (installed with Homebrew):
 
@@ -112,8 +116,10 @@ Packages (installed with Homebrew):
   - pv
   - wget
   - wrk
+  - pyenv
+  - kubernetes-helm
 
-My [dotfiles](https://github.com/geerlingguy/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
+[Dotfiles](https://github.com/joshtharakan/dotfiles.git) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
 
 Finally, there are a few other preferences and settings added on for various apps and services.
 
@@ -126,17 +132,6 @@ It's my hope that I can get the rest of these things wrapped up into Ansible pla
   1. Set JJG-Term as the default Terminal theme (it's installed, but not set as default automatically).
   2. Install [Sublime Package Manager](http://sublime.wbond.net/installation).
   3. Install all the apps that aren't yet in this setup (see below).
-  4. Remap Caps Lock to Escape (requires macOS Sierra 10.12.1+).
-  5. Set trackpad tracking rate.
-  6. Set mouse tracking rate.
-  7. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
-
-### Applications/packages to be added:
-
-These are mostly direct download links, some are more difficult to install because of custom installers or other nonstandard install quirks:
-
-  - [iShowU HD](http://www.shinywhitebox.com/downloads/iShowU_HD_2.3.20.dmg)
-  - [Adobe Creative Cloud](http://www.adobe.com/creativecloud.html)
 
 ### Configuration to be added:
 
@@ -150,16 +145,7 @@ These are mostly direct download links, some are more difficult to install becau
     git clone git://github.com/scrooloose/nerdtree.git
     ```
 
-## Testing the Playbook
-
-Many people have asked me if I often wipe my entire workstation and start from scratch just to test changes to the playbook. Nope! Instead, I posted instructions for how I build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which I can continually run and re-run this playbook to test changes and make sure things work correctly.
-
-Additionally, this project is [continuously tested on Travis CI's macOS infrastructure](https://travis-ci.org/geerlingguy/mac-dev-playbook).
-
-## Ansible for DevOps
-
-Check out [Ansible for DevOps](https://www.ansiblefordevops.com/), which teaches you how to automate almost anything with Ansible.
 
 ## Author
 
-[Jeff Geerling](https://www.jeffgeerling.com/), 2014 (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).
+This playbook is cloned and modified from the below playbook by [Jeff Geerling](https://www.jeffgeerling.com/), 2014 (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).
