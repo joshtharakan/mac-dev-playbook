@@ -69,6 +69,7 @@ homebrew_cask_apps:
   - virtualbox
   - visual-studio-code
   - intellij-idea-ce
+  - minishift
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
